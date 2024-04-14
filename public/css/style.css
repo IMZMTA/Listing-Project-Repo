@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(221, 239, 145) !important;
+    font-family: 'Pacifico', cursive !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container{
+    flex: 1;
+}
+.navbar {
+    height: 5rem;
+    background-color:rgb(178, 208, 209);
+    margin-bottom: 0.5rem !important;
+}
+
+.fa-compass {
+    color: #fe424d;
+    font-size: 2rem;
+}
+.navbar-brand{
+    font-size: 1.8rem !important;
+}
+
+.nav-link{
+    color: black !important;
+}
+
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+    margin-right: 0.5rem;
+}
+
+.f-info-links a:hover {
+    text-decoration: underline;
+}
+
+.f-info-links, .f-info-socials, .f-info-brand {
+    width: 100%;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-info-socials i{
+    font-size: 1.3rem;
+    margin-right: 0.75rem;
+}
+
+.f-info {
+    text-align: center;
+    height: 8rem;
+    background-color: rgba(121, 117, 117, 0.773);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+/* Cards */
+.listing-card{
+    border: none !important;
+    margin-right: 0.5rem;
+    margin-bottom: 2rem;
+    padding: 0.4rem;
+}
+
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-body {
+    padding: 0 !important;
+}
+
+.card-body p {
+    font-weight: 400 !important;
+}
+
+.listing-links {
+    text-decoration: none;
+}
+
+.card-img-overlay{
+    opacity: 0;
+}
+
+.card-img-overlay:hover{
+    opacity: 0.3;
+    background-color: white;
+}
+
+/* show image */
+
+.show-img {
+    height: 30vh;
+}
+
+.btns {
+    display: flex;
+}
+
+.show-card {
+    padding-left: 0;
+    padding-right: 0;
+}
+/* Proceeding Buttons */
+#wrapper{
+    display: flex;
+    height: 69.8vh;
+    justify-content: center;
+    align-items: center;
+}
+.bttn{
+    background-color: red;
+    border-radius: 5px;
+    padding: 0.8rem 2.3rem;
+    color: white;
+    position: relative;
+    box-shadow: 5px 5px 5px 0.3px rgb(0,0,0.3);
+    z-index: 0;
+    border: none;
+    text-decoration: none;
+}
+.bttn::before{
+    content: "";
+    position: absolute;
+    background-color: black;
+    font-size: 1.1 rem;
+    top:0;
+    bottom:0;
+    border-radius: 5px;
+    left:0;
+    right:0;
+    transform: scaleX(0);
+    transition: all ease 0.8s;
+    transform-origin: left;
+    z-index: -1;
+
+}
+.bttn:hover::before{
+    transform: scaleX(1);
+}
+
+/* Map */
+#map { 
+    width: 100%;
+    height: 400px;
+    }
+
+    /* nav */
+    #filters{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    
+    .filter{
+        margin-top: 1rem;
+        text-align: center;
+        margin-right: 1.5rem;
+        opacity:0.7;
+    }
+
+    .filter:hover{
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    .filter p{
+        font-size: 0.8rem;
+    }
+
+    .hidden{
+        display: none;
+    }
+
+    .tax-toggle{
+        border: 1px solid red;
+        border-radius: 1rem;
+        height: 3rem;
+        padding: 1.5rem;
+        margin-left: 5rem;
+        display: flex;
+        align-items: center;
+        justify-self: flex-end;
+    }
+
+    .search-btn{
+        background-color: #fe424d !important;
+        border-radius: 4rem !important;
+        color:#fff !important;
+        padding: 0 1rem 0 1rem !important;
+    }
+    
+    .search-btn i{
+        display: inline  !important;
+        margin-right: 0.5rem  !important;
+    }
+    
+    .search-inp{
+        border-radius: 4rem  !important;
+        padding: 0.5rem 3rem 0.5rem 3rem  !important;
+        font-size: 0.8rem !important;
+        text-align: center;
+    }
+
+    @media (max-width: 786px) {
+        .navbar {
+            text-align: center !important;
+            height: auto; /* Remove fixed height for smaller screens */
+        }
+    
+        .navbar a {
+            display: block !important;
+            margin: 5px !important;
+        }
+    
+        .navbar-brand {
+            margin-bottom: 10px; /* Adjust spacing for the brand */
+        }
+    
+        .navbar-nav {
+            flex-direction: column; /* Stack items vertically */
+        }
+    
+        .navbar-toggler {
+            margin-top: 10px; /* Adjust spacing for the toggle button */
+        }
+    
+        .navbar-collapse {
+            border-top: 1px solid rgb(211, 19, 19); /* Add a border between items */
+        }
+    
+        .navbar-nav .nav-link {
+            padding: 10px;
+        }
+    
+        .search-btn,
+        .search-inp {
+            margin-top: 10px; /* Adjust spacing for the search form */
+        }
+    }
+    
+    

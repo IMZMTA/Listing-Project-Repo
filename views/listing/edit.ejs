@@ -1,0 +1,63 @@
+<% layout("/layouts/boilerplate.ejs") %>
+    <div class="row">
+        <div class="col-8 offset-2">
+            <h3>Edit this Listing</h3>
+            <form method="POST" action="/listing/<%= listing._id %>?_method=PUT" novalidate class="needs-validation"
+                enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input name="listing[title]" value="<%= listing.title%>" type="text" class="form-control" required>
+                    <div class="invalid-feedback">
+                        Please fill the title details correctly.
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea name="listing[description]" class="form-control"
+                        required><%= listing.description %></textarea>
+                    <div class="invalid-feedback">
+                        Please fill the short description.
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <p>Original Image : </p>
+                    <img src="<%= originalImageUrl %>" alt="" width="200" height="200">
+                </div>
+                <div class="mb-3">
+                    <label for="image" class="form-label">Upload New Image</label>
+                    <input name="listing[image]" type="file" class="form-control">
+                    <div class="invalid-feedback">
+                        Please fill the image url correctly.
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="mb-3 col-md-4">
+                        <label for="price" class="form-label">Price</label>
+                        <input name="listing[price]" value="<%= listing.price %>" type="number" class="form-control"
+                            required>
+                        <div class="invalid-feedback">
+                            Please fill the price format correctly.
+                        </div>
+                    </div>
+                    <div class="mb-3 col-md-8">
+                        <label for="country" class="form-label">Country</label>
+                        <input name="listing[country]" value="<%= listing.country%>" type="text" class="form-control"
+                            required>
+                        <div class="invalid-feedback">
+                            Please fill the country name.
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="location" class="form-label">Location</label>
+                    <input name="listing[location]" value="<%= listing.location%>" type="text" class="form-control" required>
+                    <div class="invalid-feedback">
+                        Please fill the location.
+                    </div>
+                </div>
+                <br>
+                <button class="btn btn-primary">Edit</button>
+            </form>
+            <br><br>
+        </div>
+    </div>
